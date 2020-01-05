@@ -1,0 +1,14 @@
+#f25130     primary color
+
+#c94428     secondary color
+
+#871501     save button color
+
+
+
+#1e731e    green used in bulk insertion
+
+#b81212     red used in bulk insertion
+
+
+

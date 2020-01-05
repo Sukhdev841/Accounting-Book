@@ -1,0 +1,230 @@
+body
+{
+    /* background-color: blue; */
+    padding: 0;
+    margin: 0;
+}
+
+.background
+{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#header
+{
+    background-color: #f25130;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-weight: 1;
+    font-size: 60px;
+    padding : 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.nav_ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c94428;
+}
+
+.nav_li
+{
+    float: left;
+}
+
+.right_float
+{
+    float: right;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.left_float
+{
+    float:left;
+}
+
+.nav_li a
+{
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.nav_li a:hover {
+    background-color: #111;
+  }
+
+.input_field
+{
+    background-color: white;
+    height: 30px;
+    width: 250px;
+    /* border-radius: 10px; */
+}
+
+.input_field
+{
+    /* height: 100%; */
+    width: 60%;
+    float: right;
+    border: none;
+    padding-left: 10px;
+    /* border-right: solid black 1px; */
+    margin-right: 10px;
+}
+
+button.input_field 
+{
+    float: right;
+    width: 60px;
+    background-color: #871501;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+button.input_field:hover
+{
+    cursor: pointer;
+}
+
+button.input_field::-moz-focus-inner {
+    border: 0;
+ }
+
+#notification
+{
+    position: absolute;
+    top:10px;
+    left: 182vh;
+    height: 60px;
+    width: 240px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    visibility: hidden;
+    /* transition: 0.7s opacity; */
+    /* opacity: 1; */
+}
+
+.left_line
+{
+    height: 100%;
+    width: 5px;
+    background-color: green;
+}
+
+.notification_icon img
+{
+    margin-top: 12px;
+    margin-left: 6px;
+    height: 38px;
+    width: auto;
+}
+
+.message_area
+{
+    margin-top: 25px;
+    font-size: 12px;
+    font-family: sans-serif;
+    margin-left: 8px;
+    color: grey;
+    font-style: bold;
+}
+.word_text
+{
+    color: grey;
+}
+.word_unit
+{
+    color: grey;
+    margin: 0 auto;
+    width: 60%;
+    height: 50px;
+    /* background-color: black; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.small_img
+{
+    height: 100%;
+    width: auto;
+}
+
+.card_unit
+{
+    /* border-right: solid black 1px; */
+    width: auto;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.star
+{
+    height: 23px;
+    width: 30px;
+}
+
+.hollow_star
+{
+    height: 100%;
+    width: 100%;
+    background-image: url("icons/hollow_star.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.filled_star
+{
+    height: 100%;
+    width: 100%;
+    background-image: url("icons/star.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.filled_star:hover
+{
+    cursor: pointer;
+}
+
+.hollow_star:hover
+{
+    cursor: pointer;
+    background-image: url("../icons/star.png");
+}
+
+.delete_button img:hover
+{
+    cursor: pointer;
+}
+
+.footer
+{
+    height: 10px;
+}
+
+.no_decoration
+{
+    text-decoration: none;
+}

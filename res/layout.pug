@@ -1,0 +1,28 @@
+html
+    head
+        title My Vocabulary
+        script(src='scripts/main.js')
+        block scripts
+        style
+            include ./styles/header.css
+            block styles
+body
+    div.background
+        div#notification
+            .left_line.left_float
+            .left_float.notification_icon
+                img
+            .message_area.left_float
+        block header
+            h1#header Words
+            ul.nav_ul
+                li.nav_li
+                    a(href="/") Home
+                li.nav_li
+                    a(href="/bulk-insert") Bulk Insert
+                li.nav_li.right_float
+                    button.input_field(onclick="add_word()") Save
+                    input#word_input.input_field(type='text' name='word_input' placeholder="Enter word to save ...")
+        block content
+        .footer
+        block foot

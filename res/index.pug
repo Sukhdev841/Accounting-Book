@@ -1,0 +1,17 @@
+extends layout.pug
+
+block styles
+  include ./styles/index.css
+
+block content
+  for word in words
+    .word_unit(id=word.word)
+      a.no_decoration.word_text.left_float.card_unit(href='https://www.google.com/search?q='+word.word target='_blank') #{word.word}
+      .delete_button.right_float.card_unit
+        img.small_img(src='./icons/bin.png' onclick='delete_word('+word.word+')')
+      .sucess_rate.right_float.card_unit  #{word.easiness*100}%
+      .right_float.card_unit.star(onclick='star_clicked('+word.word+')')
+        if word.starred > 0
+          .small_img.filled_star
+        else
+          .small_img.hollow_star

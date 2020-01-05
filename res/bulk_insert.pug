@@ -1,0 +1,15 @@
+extends layout.pug
+
+block scripts
+    script(src='scripts/bulk_insert.js')
+
+block styles
+  include ./styles/bulk_insert.css
+
+block content
+    #bw_div
+        textarea#bulk_words(placeholder="Enter line separated words here..")
+        br
+        .bulk_words_button_div
+            button.submit_button.bulk_words_button_position(onclick='bulk_insertion()') Submit
+    #result
