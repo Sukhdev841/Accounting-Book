@@ -15,10 +15,14 @@ function insertion_failed(word)
 
 function bulk_insertion()
 {
+    var dump_words = document.getElementById("dumped_words_checkbox").checked == true;
     var words = document.getElementById("bulk_words").value.split('\n');
     console.log(words);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", '/bulk_insert', true);
+    if(dump_words)
+    xhr.open("POST", '/bulk_dump_insert', true);
+    else
+        xhr.open("POST", '/bulk_insert', true);
     //Send the proper header information along with the request
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 

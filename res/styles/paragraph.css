@@ -1,0 +1,35 @@
+#result_paragraph
+{
+    border: solid gray 1px;
+    margin: 10px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.new_word_highlight
+{
+    background-color: #4d4dff;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+.word_highlight
+{
+    color: white;
+    background-color: #32CD32;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+.star_highlight
+{
+    color: white;
+    background-color: #ffd700;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}

@@ -228,3 +228,19 @@ button.input_field::-moz-focus-inner {
 {
     text-decoration: none;
 }
+
+.gray_text
+{
+    margin-top: 3px;
+    font-size: 15px;
+    color: gray;
+    font-family: sans-serif;
+}
+
+.black_text
+{
+    margin-top: 3px;
+    font-size: 15px;
+    color: black;
+    font-family: sans-serif;
+}

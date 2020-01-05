@@ -1,0 +1,19 @@
+extends layout.pug
+
+block scripts
+    script(src='scripts/paragraph.js')
+
+block styles
+  include ./styles/paragraph.css
+  include ./styles/bulk_insert.css
+
+block content
+    #bw_div
+        textarea#paragraph_text_area.text_area_style(placeholder="Enter passage here ...")
+        br
+        .bulk_words_button_div
+            button.submit_button.bulk_words_button_position(onclick='paragraph()') Submit
+            //- input.bulk_words_button_position.extra_right_margin(type='checkbox' id='dumped_words_checkbox' )
+            //- lablel.bulk_words_button_position.gray_text Dumped
+            
+    #result_paragraph.black_text

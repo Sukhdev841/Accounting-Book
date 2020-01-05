@@ -8,8 +8,11 @@ block styles
 
 block content
     #bw_div
-        textarea#bulk_words(placeholder="Enter line separated words here..")
+        textarea#bulk_words.text_area_style(placeholder="Enter line separated words here..")
         br
         .bulk_words_button_div
             button.submit_button.bulk_words_button_position(onclick='bulk_insertion()') Submit
+            input.bulk_words_button_position.extra_right_margin(type='checkbox' id='dumped_words_checkbox' )
+            lablel.bulk_words_button_position.gray_text Dumped
+            
     #result
