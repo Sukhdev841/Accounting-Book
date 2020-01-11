@@ -9,11 +9,25 @@ block styles
 
 block content
     #bw_div
-        textarea#paragraph_text_area.text_area_style(placeholder="Enter passage here ...")
+        textarea#paragraph_text_area.text_area_style(placeholder="Enter passage here ...")  By default, data elements cannot be dropped in other elements. To allow a drop, we must prevent the default handling of the element.
         br
         .bulk_words_button_div
             button.submit_button.bulk_words_button_position(onclick='paragraph()') Submit
             //- input.bulk_words_button_position.extra_right_margin(type='checkbox' id='dumped_words_checkbox' )
             //- lablel.bulk_words_button_position.gray_text Dumped
             
+    #classification
+        #new_words_column.classification_column.left_float.left_classification_border(ondrop="drop(event)" ondragover="allowDrop(event)")
+            .column_heading New Words
+            .column_words
+                .column_word_unit(id="apple" draggable="true" ondragstart="drag(event)") Apple
+        #normal_words_column.classification_column.left_float(ondrop="drop(event)" ondragover="allowDrop(event)")
+            .column_heading Normal Words
+            .column_words
+                .column_word_unit(id="cat" draggable="true" ondragstart="drag(event)") Cat
+        #starred_words_column.classification_column.left_float(ondrop="drop(event)" ondragover="allowDrop(event)")
+            .column_heading Starred Words
+            .column_words
+                .column_word_unit(id="green" draggable="true" ondragstart="drag(event)") Green
+        //- #dumped_words_column.classification_column.left_float
     #result_paragraph.black_text

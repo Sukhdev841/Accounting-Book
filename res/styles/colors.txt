@@ -1,14 +1,19 @@
 #f25130     primary color
-
 #c94428     secondary color
-
 #871501     save button color
 
 
 
 #1e731e    green used in bulk insertion
-
 #b81212     red used in bulk insertion
+#dbd5d5     border color for classification division
 
+
+#e0ebff     new word highlight          #f5faff        classification background
+#ffcfcf     existing word highlight     #ffe0e0        classification background
+#ffed87     star word highlight         #fff5bf         classification background
+
+
+#403f3d     dark font color
 
 

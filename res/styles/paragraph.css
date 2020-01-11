@@ -1,16 +1,24 @@
+#bw_div
+{
+    display: none;
+}
+
 #result_paragraph
 {
-    border: solid gray 1px;
+    /* border: solid gray 1px; */
     margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 10px;
     text-align: justify;
     line-height: 25px;
+    /* visibility: hidden; */
 }
 
 .new_word_highlight
 {
-    background-color: #4d4dff;
-    color: white;
+    background-color: #e0ebff;
+    color: black;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
@@ -18,8 +26,8 @@
 
 .word_highlight
 {
-    color: white;
-    background-color: #32CD32;
+    color: black;
+    background-color: #ffcfcf;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
@@ -27,9 +35,105 @@
 
 .star_highlight
 {
-    color: white;
-    background-color: #ffd700;
+    color: black;
+    background-color: #ffed87;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+}
+
+#classification
+{
+    margin: 20px auto;
+    width: 80%;
+    height: 100px;
+    /* background-color: red; */
+    /* border-top: solid #dbd5d5 1px; */
+}
+
+.classification_column
+{
+    width: 33%;
+    height: auto;
+    border: solid #dbd5d5 1px;
+    border-left: none;
+    padding-bottom: 10px;
+}
+
+.left_classification_border
+{
+    border-left: solid #dbd5d5 1px;
+}
+
+.column_heading
+{
+    color: gray;
+    font-family: sans-serif;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin-bottom: 10px;
+    border-bottom: solid #dbd5d5 1px;
+}
+
+#new_words_column .column_heading
+{
+    background-color: #e0ebff ;
+}
+
+#new_words_column .column_words .column_word_unit
+{
+    background-color: #e0ebff;
+}
+
+#normal_words_column .column_heading
+{
+    background-color: #ffcfcf  ;
+}
+
+#normal_words_column .column_words .column_word_unit
+{
+    background-color: #ffcfcf  ;
+}
+
+#starred_words_column .column_heading
+{
+    background-color:#fff5bf;
+}
+
+#starred_words_column .column_words .column_word_unit
+{
+    background-color:#fff5bf;
+}
+
+.column_word_unit
+{
+    color: #403f3d;
+    font-family: sans-serif;
+    font-size: 14px;
+    float: left;
+    margin-left: 3px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 10px;
+}
+
+.column_word_unit:hover
+{
+    cursor: pointer;
+}
+
+.starred_word_background
+{
+    background-color:#fff5bf;
+}
+
+.normal_word_background
+{
+    background-color: #ffcfcf  ;
+}
+
+.new_word_background
+{
+    background-color: #e0ebff;
 }

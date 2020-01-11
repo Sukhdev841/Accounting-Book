@@ -5,7 +5,7 @@ function paragraph()
     var result = document.getElementById("result_paragraph");
 
     var words = paragraph_.split('\n');         // <=== first splitter is applied here
-    var spliters = ['\t','.',',',' ',':',';','"',"'"];
+    var spliters = ['\t','.',',',' ',':',';','"',"'",'?'];
     
     for(ii=0; ii<spliters.length; ii++)
     {
@@ -80,3 +80,58 @@ function paragraph()
 
     console.log(words);
 }
+
+function max_(var1,var2)
+{
+    if(var1 > var2)
+        return var1;
+    return var2;
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+  }
+  
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+  
+  function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+
+    var new_words_column = document.getElementById("new_words_column");
+    var normal_words_column = document.getElementById("normal_words_column");
+    var starred_words_column = document.getElementById("starred_words_column");
+
+    if(ev.target.id=="new_words_column")
+    {
+        document.getElementById(data).classList.remove("normal_word_background");
+        document.getElementById(data).classList.remove("starred_word_background");
+        document.getElementById(data).classList.add("new_word_background");
+    }
+    else if(ev.target.id=="normal_words_column")
+    {
+        document.getElementById(data).classList.remove("starred_word_background");
+        document.getElementById(data).classList.remove("new_word_background");
+        document.getElementById(data).classList.add("normal_word_background");
+    }
+    else if(ev.target.id=="starred_words_column")
+    {
+        document.getElementById(data).classList.remove("normal_word_background");
+        document.getElementById(data).classList.remove("new_word_background");
+        document.getElementById(data).classList.add("starred_word_background");
+    }
+    else
+    {
+        //delete element
+    }
+    var max_height = max_(normal_words_column.clientHeight, max_(starred_words_column.clientHeight,new_words_column.clientHeight));
+    
+    console.log(max_height);
+
+    starred_words_column.style.height  = new_words_column.style.height  = normal_words_column.style.height = max_height-10 + "px"
+    
+    
+    ev.target.appendChild(document.getElementById(data));
+  }

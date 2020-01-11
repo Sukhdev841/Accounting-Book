@@ -16,6 +16,13 @@ app.set('view engine','pug');
 var config = require('./config.json');      // configuration file
 
 app.get('/',function(req,res){
+
+    // for debugging
+
+    res.render('paragraph');
+    return;
+
+    // real code ---
     
     db.select_random(20,function(err,rows){
         console.log(rows);
