@@ -69,7 +69,7 @@ class db{
 
     star_insert(word,callback)
     {
-        this.conn.run("INSERT INTO words(word,starred) VALUES (?)",[word,true],(err)=>{
+        this.conn.run("INSERT INTO words(word,starred) VALUES (?,?)",[word,true],(err)=>{
             if(err)
             {
                 console.log("[ERROR] while inserting '"+word+"'\n\t" + err.message);

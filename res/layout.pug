@@ -28,3 +28,12 @@ body
         block content
         .footer
         block foot
+    #express_block
+        .top_line
+        input#express_input(type='text' placeholder='Enter word')
+        select#express_options
+            option(value='normal') Normal
+            option(value='star') Star
+            option(value='dump') dump
+            option(value='delete') delete
+        button#express_submit_button(onclick="save_express()")    Save

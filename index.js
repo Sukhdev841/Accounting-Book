@@ -17,12 +17,12 @@ var config = require('./config.json');      // configuration file
 
 app.get('/',function(req,res){
 
-    // for debugging
+    // // for debugging
 
-    res.render('paragraph');
-    return;
+    // res.render('paragraph');
+    // return;
 
-    // real code ---
+    // // real code ---
     
     db.select_random(20,function(err,rows){
         console.log(rows);
@@ -159,6 +159,16 @@ app.post('/check_words',function(req,res){
 app.post('/new_word',function(req,res){
 
     db.insert(req.body.word,function(err){
+        if(err)
+            res.send(true);        // error
+        else
+            res.send(false);         // success
+    });  
+})
+
+app.post('/new_star_word',function(req,res){
+
+    db.star_insert(req.body.word,function(err){
         if(err)
             res.send(true);        // error
         else

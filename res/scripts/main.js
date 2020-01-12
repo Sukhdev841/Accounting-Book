@@ -148,3 +148,49 @@ function delete_word(parent_tag)
     }
     xhr.send("word="+new_word);
 }
+
+function save_express()
+{
+    var type = document.getElementById("express_options").value;
+    var word = document.getElementById("express_input").value;
+    
+    var post_url = '';
+
+    if(type == 'normal')
+        post_url = '/new_word';
+    else if(type == 'star')
+        post_url = '/new_star_word'
+    else if(type == 'dump')
+        post_url ='/new_dumped_word';
+    else
+    {
+        document.getElementById("express_input").value = "";
+        return;   
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", post_url, true);
+    //Send the proper header information along with the request
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() { // Call a function when the state changes.
+        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+            // Request finished. Do processing here.
+            var res = xhr.responseText;
+            console.log(res == 'true');
+            document.getElementById("express_input").value = "";
+            if(res == 'true')
+            {
+                // failed to insert word
+                failure_notification(word);
+            }
+            else
+            {
+                // word inserted successfully
+                success_notification(word);
+            }
+        }
+    }
+    xhr.send("word="+word);
+
+}
