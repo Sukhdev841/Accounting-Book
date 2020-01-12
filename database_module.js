@@ -67,6 +67,23 @@ class db{
         });
     }
 
+    star_insert(word,callback)
+    {
+        this.conn.run("INSERT INTO words(word,starred) VALUES (?)",[word,true],(err)=>{
+            if(err)
+            {
+                console.log("[ERROR] while inserting '"+word+"'\n\t" + err.message);
+                callback(true,word);     // true == error
+            }
+            else
+            {
+                console.log("[OK] Word : " + word + " inserted");
+                callback(false,word);    // false == not error
+            }
+                
+        });
+    }
+
     select_all(callback)
     {
         this.conn.all("SELECT * from words",function(err,rows){

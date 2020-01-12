@@ -15,19 +15,21 @@ block content
             button.submit_button.bulk_words_button_position(onclick='paragraph()') Submit
             //- input.bulk_words_button_position.extra_right_margin(type='checkbox' id='dumped_words_checkbox' )
             //- lablel.bulk_words_button_position.gray_text Dumped
-            
-    #classification
-        #new_words_column.classification_column.left_float.left_classification_border(ondrop="drop(event)" ondragover="allowDrop(event)")
-            .column_heading New Words
-            .column_words
-                .column_word_unit(id="apple" draggable="true" ondragstart="drag(event)") Apple
-        #normal_words_column.classification_column.left_float(ondrop="drop(event)" ondragover="allowDrop(event)")
-            .column_heading Normal Words
-            .column_words
-                .column_word_unit(id="cat" draggable="true" ondragstart="drag(event)") Cat
-        #starred_words_column.classification_column.left_float(ondrop="drop(event)" ondragover="allowDrop(event)")
-            .column_heading Starred Words
-            .column_words
-                .column_word_unit(id="green" draggable="true" ondragstart="drag(event)") Green
-        //- #dumped_words_column.classification_column.left_float
+    
     #result_paragraph.black_text
+
+    .container#classification_container
+        #classification
+            #normal_words_column.classification_column.left_classification_border(ondrop="drop(event)" ondragover="allowDrop(event)")
+                .column_heading Normal Words
+                .column_words
+            #new_words_column.classification_column(ondrop="drop(event)" ondragover="allowDrop(event)")
+                .column_heading New Words
+                .column_words
+            #starred_words_column.classification_column(ondrop="drop(event)" ondragover="allowDrop(event)")
+                .column_heading Starred Words
+                .column_words
+        .classification_button_div
+            button.classification_button(onclick='submit_catogrised_words()') Submit
+    
+        //- #dumped_words_column.classification_column.left_float

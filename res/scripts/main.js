@@ -10,6 +10,15 @@ function show_notification()
     setTimeout(hide_notification,3000);
 }
 
+function final_success_notification(message)
+{
+    var notification_div = document.getElementById("notification");
+    notification_div.childNodes[0].style.backgroundColor = "green";
+    notification_div.childNodes[1].childNodes[0].src = './icons/success.png';
+    notification_div.childNodes[2].innerHTML = message;
+    show_notification();
+}
+
 function success_notification(word)
 {
     var notification_div = document.getElementById("notification");

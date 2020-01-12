@@ -116,6 +116,7 @@ button.input_field::-moz-focus-inner {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     visibility: hidden;
+    padding-top: 10px;
     /* transition: 0.7s opacity; */
     /* opacity: 1; */
 }
@@ -123,7 +124,7 @@ button.input_field::-moz-focus-inner {
 .left_line
 {
     height: 100%;
-    width: 5px;
+    width: 5%;
     background-color: green;
 }
 
@@ -137,12 +138,15 @@ button.input_field::-moz-focus-inner {
 
 .message_area
 {
-    margin-top: 25px;
+    text-align: left;
+    /* margin-top: 10px; */
+    width: 60%;
     font-size: 12px;
     font-family: sans-serif;
     margin-left: 8px;
     color: grey;
     font-style: bold;
+    /* background-color: red; */
 }
 .word_text
 {

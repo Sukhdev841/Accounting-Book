@@ -64,7 +64,30 @@ app.post('/bulk_insert',function(req,res){
     }
 })
 
+app.post('/bulk_star_insert',function(req,res){
+    var words = JSON.parse(req.body.words);
+    console.log(words);
+    var flags = new Array(words.length);
+    var finished = _.after(words.length,doRender);
+    for(i=0; i<words.length;i++)
+    {
+        var j = i;
+        db.star_insert(words[j],function(err,word){
+            if(err)
+                flags[words.indexOf(word)] = true;        // error
+            else
+            flags[words.indexOf(word)]= false;        // no error
+            finished();
+        })
+    }
+    function doRender()
+    {
+        res.send(flags);
+    }
+})
+
 app.post('/bulk_dump_insert',function(req,res){
+    console.log(req.body);
     var words = JSON.parse(req.body.words);
     console.log(words);
     var flags = new Array(words.length);
